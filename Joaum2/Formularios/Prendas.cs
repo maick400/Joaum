@@ -105,5 +105,10 @@ namespace Joaum2
         {
 
         }
+
+        private void cbxCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

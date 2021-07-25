@@ -65,9 +65,15 @@ namespace Joaum2.Formularios
             cbxMaterial.DisplayMember = "Material";
             cbxMaterial.ValueMember = "IdMaterial";
             cbxMaterial.DataSource = material.Listar();
-            
+            //Unidades
+            conexion = new Conexion();
+            cbxUnidad.DisplayMember = "NombreUnidad";
+            cbxUnidad.ValueMember = "IdUnidad";
+            cbxUnidad.DataSource = conexion.listarAny("ListarUnidad");
 
-           
+
+
+
         }
 
 
@@ -153,20 +159,19 @@ namespace Joaum2.Formularios
             ofdImagenes.Filter = "Imagenes(*.JPEG,*.JPG,*.PNG)|*.JPEG;*.JPG;*.PNG";
             ofdImagenes.Multiselect = true;
             ofdImagenes.Title = "Selecciones las las imagenes";
-          
-            if (ofdImagenes.ShowDialog()==DialogResult.OK)
+
+            if (ofdImagenes.ShowDialog() == DialogResult.OK)
             {
-                foreach(String file  in ofdImagenes.FileNames)
-                {
+                foreach (String file in ofdImagenes.FileNames)
+                {   
                     Image img = Image.FromFile(file);
                     imagenes.Add(img);
                 }
+     
             }
-            if(imagenes.Count>0)
             picImagenes.Image = imagenes[0];
 
-            if (indexImg == 0)
-                btnImgAnterior.Enabled = false;
+
 
 
 
@@ -179,23 +184,24 @@ namespace Joaum2.Formularios
 
         private void btnImgSiguiente_Click(object sender, EventArgs e)
         {
-
-            
-            if (indexImg == imagenes.Count - 2)
-                btnImgSiguiente.Enabled = false;
-            if (indexImg ==0)
-                btnImgAnterior.Enabled = true;
-
-
-
-            if (imagenes.Count > 0 )
+            if(imagenes.Count>0)
             {
-                indexImg += 1;
+                if (indexImg == imagenes.Count - 1)
+                {
+                    indexImg = 0;
+                }
+                else
+                    indexImg += 1;
+
                 picImagenes.Image = imagenes[indexImg];
 
+
+
             }
-            else
-                picImagenes.Image = null;
+
+
+
+
 
 
 
@@ -205,47 +211,33 @@ namespace Joaum2.Formularios
         private void btnImgAnterior_Click(object sender, EventArgs e)
         {
 
-            if (indexImg == 1)
-                btnImgAnterior.Enabled = false;
-            if (indexImg < imagenes.Count)
-                btnImgSiguiente.Enabled = true;
-
-            if (imagenes.Count > 0)
-            {
-                if (indexImg<0)
-                indexImg -= 1;
-                picImagenes.Image = imagenes[indexImg];
-
-            }
+            if(imagenes.Count>0)
+            if (indexImg==0)
+                indexImg = imagenes.Count - 1;
             else
-                picImagenes.Image = null;
+                indexImg -= 1;
 
 
+            picImagenes.Image = imagenes[indexImg];
 
-
-
-
-
+   
 
         }
 
         private void btnImgDrop_Click(object sender, EventArgs e)
         {
-            if (imagenes.Count > 0)
+          if (imagenes.Count==1)
             {
-                imagenes.RemoveAt(indexImg);
+                btnImgAnterior.Enabled = false;
+                btnImgSiguiente.Enabled = false;
             }
-
-            if (imagenes.Count == 0)
+          else if  (imagenes.Count==0)
+            {
                 picImagenes.Image = null;
-
-
-            else
-            {
-                picImagenes.Image = imagenes[indexImg-1];
-
+                btnImgAnterior.Enabled = true ;
+                btnImgSiguiente.Enabled = true;
             }
-            indexImg =0;
+
         }
     }
 }

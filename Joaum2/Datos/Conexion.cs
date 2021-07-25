@@ -13,7 +13,7 @@ namespace Joaum2.Data
     public class Conexion
     {
 
-      private  SqlConnection cn = new SqlConnection("server=localhost ; database=Joaum ; integrated security = true");
+      private  SqlConnection cn = new SqlConnection("Data Source=SQL5050.site4now.net;Initial Catalog=db_a77d2a_joaum;User Id=db_a77d2a_joaum_admin;Password=4006381172806Mm.");
         SqlCommand cmd;
 
     public DataTable listar(SqlCommand cmd)
