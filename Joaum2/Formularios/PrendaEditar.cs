@@ -46,7 +46,7 @@ namespace Joaum2.Formularios
         }
 
         //-----------------------cargar combo box----------------------------------
-         void CargarTbxs()
+        void CargarTbxs()
         {
             //Categorias 
             cbxCategoria.DisplayMember = "Categoria";
@@ -70,6 +70,13 @@ namespace Joaum2.Formularios
             cbxUnidad.DisplayMember = "NombreUnidad";
             cbxUnidad.ValueMember = "IdUnidad";
             cbxUnidad.DataSource = conexion.listarAny("ListarUnidad");
+            //************
+            DataGridViewButtonColumn column = new DataGridViewButtonColumn();
+            column.Name = "Boton";
+            column.HeaderText = "Color";
+            column.Visible = true;
+       
+
 
 
 
@@ -90,11 +97,13 @@ namespace Joaum2.Formularios
 
             Colores color = new Colores();
             dgvColores.DataSource = color.addListado();
-            dgvColores.Columns[0].Visible = false;
-            dgvColores.Columns[2].Visible = false;
-            DataGridViewColumn Column = new DataGridViewColumn();
+            dgvColores.Columns[0].Visible = true;
+            dgvColores.Columns[2].Visible = true;
+            dgvColores.Rows[1].DefaultCellStyle.BackColor = Color.AliceBlue;
             
-    //dgvColores.Columns.Add()
+
+
+            //dgvColores.Columns.Add()
 
             //dgvStock.Columns[1].Width = 30;
             //dgvStock.Columns[2].Width = 50;
@@ -136,7 +145,7 @@ namespace Joaum2.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StockModificador s = new StockModificador();
+            ColoreSelect s = new ColoreSelect();
             s.Show();
         }
 
@@ -237,10 +246,10 @@ namespace Joaum2.Formularios
 
         private void btnImgDrop_Click(object sender, EventArgs e)
         {
-          if (imagenes.Count==1)
+
+          if (imagenes.Count>1)
             {
-                btnImgAnterior.Enabled = false;
-                btnImgSiguiente.Enabled = false;
+                
             }
           else if  (imagenes.Count==0)
             {

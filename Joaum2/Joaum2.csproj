@@ -71,11 +71,11 @@
     <Compile Include="Formularios\Prendas.Designer.cs">
       <DependentUpon>Prendas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\StockModificador.cs">
+    <Compile Include="Formularios\ColoreSelect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\StockModificador.Designer.cs">
-      <DependentUpon>StockModificador.cs</DependentUpon>
+    <Compile Include="Formularios\ColoreSelect.Designer.cs">
+      <DependentUpon>ColoreSelect.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,8 +88,8 @@
     <EmbeddedResource Include="Formularios\Prendas.resx">
       <DependentUpon>Prendas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\StockModificador.resx">
-      <DependentUpon>StockModificador.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\ColoreSelect.resx">
+      <DependentUpon>ColoreSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

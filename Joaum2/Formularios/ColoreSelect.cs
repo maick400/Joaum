@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Joaum2.Formularios
 {
-    public partial class StockModificador : Form
+    public partial class ColoreSelect : Form
     {
-        public StockModificador()
+        public ColoreSelect()
         {
             InitializeComponent();
+        }
+
+        private void ColoreSelect_Load(object sender, EventArgs e)
+        {
+            +-
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            +
         }
     }
 }

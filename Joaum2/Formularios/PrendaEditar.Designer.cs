@@ -60,6 +60,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.ofdImagenes = new System.Windows.Forms.OpenFileDialog();
+            this.pnlColor = new System.Windows.Forms.Panel();
             this.grpDatosGenerales.SuspendLayout();
             this.grpColores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColores)).BeginInit();
@@ -116,6 +117,7 @@
             // 
             // grpColores
             // 
+            this.grpColores.Controls.Add(this.pnlColor);
             this.grpColores.Controls.Add(this.btnColorElim);
             this.grpColores.Controls.Add(this.btnColorAgre);
             this.grpColores.Controls.Add(this.dgvColores);
@@ -153,7 +155,7 @@
             this.dgvColores.Name = "dgvColores";
             this.dgvColores.ReadOnly = true;
             this.dgvColores.RowHeadersVisible = false;
-            this.dgvColores.Size = new System.Drawing.Size(243, 181);
+            this.dgvColores.Size = new System.Drawing.Size(176, 181);
             this.dgvColores.TabIndex = 1;
             // 
             // grpStock
@@ -405,6 +407,13 @@
             this.ofdImagenes.FileName = "openFileDialog1";
             this.ofdImagenes.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
+            // pnlColor
+            // 
+            this.pnlColor.Location = new System.Drawing.Point(209, 20);
+            this.pnlColor.Name = "pnlColor";
+            this.pnlColor.Size = new System.Drawing.Size(55, 52);
+            this.pnlColor.TabIndex = 6;
+            // 
             // PrendaAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,5 +472,6 @@
         private System.Windows.Forms.OpenFileDialog ofdImagenes;
         private System.Windows.Forms.ComboBox cbxUnidad;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel pnlColor;
     }
 }
