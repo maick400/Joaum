@@ -45,3 +45,4 @@ C:\Users\jaque\OneDrive\Documentos\GitHub\Joaum\Joaum2\obj\Debug\Joaum2.csproj.C
 C:\Users\jaque\OneDrive\Documentos\GitHub\Joaum\Joaum2\obj\Debug\Joaum2.csproj.CopyComplete
 C:\Users\jaque\OneDrive\Documentos\GitHub\Joaum\Joaum2\obj\Debug\Joaum2.exe
 C:\Users\jaque\OneDrive\Documentos\GitHub\Joaum\Joaum2\obj\Debug\Joaum2.pdb
+C:\Users\jaque\OneDrive\Documentos\GitHub\Joaum\Joaum2\obj\Debug\Joaum2.Formularios.StockModificador.resources

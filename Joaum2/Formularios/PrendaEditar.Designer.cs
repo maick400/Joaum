@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grpDatosGenerales = new System.Windows.Forms.GroupBox();
+            this.cbxUnidad = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.grpColores = new System.Windows.Forms.GroupBox();
             this.btnColorElim = new System.Windows.Forms.Button();
             this.btnColorAgre = new System.Windows.Forms.Button();
@@ -58,8 +60,6 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.ofdImagenes = new System.Windows.Forms.OpenFileDialog();
-            this.cbxUnidad = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.grpDatosGenerales.SuspendLayout();
             this.grpColores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColores)).BeginInit();
@@ -95,6 +95,24 @@
             this.grpDatosGenerales.TabStop = false;
             this.grpDatosGenerales.Text = "Datos Generales ";
             this.grpDatosGenerales.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cbxUnidad
+            // 
+            this.cbxUnidad.FormattingEnabled = true;
+            this.cbxUnidad.Location = new System.Drawing.Point(412, 159);
+            this.cbxUnidad.Name = "cbxUnidad";
+            this.cbxUnidad.Size = new System.Drawing.Size(121, 21);
+            this.cbxUnidad.TabIndex = 19;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label5.Location = new System.Drawing.Point(339, 160);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 20);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Unidad";
             // 
             // grpColores
             // 
@@ -133,6 +151,8 @@
             this.dgvColores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvColores.Location = new System.Drawing.Point(6, 20);
             this.dgvColores.Name = "dgvColores";
+            this.dgvColores.ReadOnly = true;
+            this.dgvColores.RowHeadersVisible = false;
             this.dgvColores.Size = new System.Drawing.Size(243, 181);
             this.dgvColores.TabIndex = 1;
             // 
@@ -246,7 +266,7 @@
             this.btnImgAgre.Name = "btnImgAgre";
             this.btnImgAgre.Size = new System.Drawing.Size(75, 52);
             this.btnImgAgre.TabIndex = 6;
-            this.btnImgAgre.Text = "Agregar ";
+            this.btnImgAgre.Text = "0";
             this.btnImgAgre.UseVisualStyleBackColor = true;
             this.btnImgAgre.Click += new System.EventHandler(this.btnImgAgre_Click);
             // 
@@ -384,24 +404,6 @@
             // 
             this.ofdImagenes.FileName = "openFileDialog1";
             this.ofdImagenes.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
-            // 
-            // cbxUnidad
-            // 
-            this.cbxUnidad.FormattingEnabled = true;
-            this.cbxUnidad.Location = new System.Drawing.Point(412, 159);
-            this.cbxUnidad.Name = "cbxUnidad";
-            this.cbxUnidad.Size = new System.Drawing.Size(121, 21);
-            this.cbxUnidad.TabIndex = 19;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(339, 160);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Unidad";
             // 
             // PrendaAgregar
             // 

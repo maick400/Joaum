@@ -13,6 +13,7 @@ namespace Joaum2
 {
     public partial class Prendas : Form
     {
+
         public Prendas()
         {
             InitializeComponent();

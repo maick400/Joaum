@@ -17,7 +17,7 @@ namespace Joaum2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PrendaAgregar());
+            Application.Run(new Main());
         }
     }
 }

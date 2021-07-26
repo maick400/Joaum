@@ -86,6 +86,16 @@ namespace Joaum2.Formularios
             conexion = new Conexion();
             dgvStock.DataSource = conexion.listarAny("FillDgvStock");
             dgvStock.Columns[0].Visible = false;
+
+
+            Colores color = new Colores();
+            dgvColores.DataSource = color.addListado();
+            dgvColores.Columns[0].Visible = false;
+            dgvColores.Columns[2].Visible = false;
+            DataGridViewColumn Column = new DataGridViewColumn();
+            
+    //dgvColores.Columns.Add()
+
             //dgvStock.Columns[1].Width = 30;
             //dgvStock.Columns[2].Width = 50;
             //dgvStock.Columns[3].Width = 30;
@@ -126,7 +136,8 @@ namespace Joaum2.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            StockModificador s = new StockModificador();
+            s.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
